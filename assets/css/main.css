@@ -2667,7 +2667,7 @@ header.header-main{
 }
 
 .tab-count-product .section-header-tab{
-    padding: 15px 15px 0 15px;
+    padding: 15px 0 15px 0;
     margin-bottom: 0;
     text-align: center;
 }
