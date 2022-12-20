@@ -1027,11 +1027,7 @@ header.header-main{
       padding: 0 12px;
       text-align: center;
     }
-    header .header-logo {
-      float: right;
-      padding-right: 0;
-      padding-left: 0px;
-    }
+ 
   }
 
 .sidebar {
@@ -2226,6 +2222,27 @@ header.header-main{
         transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), transform .2s cubic-bezier(.4, 0, 1, 1);
     }
 
+}
+
+@media (max-width: 991px) {
+
+    .account-box span.icon-account {
+        top: 15px;
+        z-index: 555
+    }
+    .header-search .header-search-box .form-search .header-search-input {
+        width: 65%;
+        margin: auto;
+    }
+    .header-logo {
+        padding: 5px 10px 5px 43px;
+    }
+    .header-main-nav {
+        height: 45px;
+    }
+    .nav-btn {
+        top: 165px;
+    }
 }
 
 .widget-product .product-carousel .item .post-title,
@@ -3488,6 +3505,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .post-item-cart .content-page .cart-collaterals{
+    height: max-content;
     width: 100%;
     border-radius: 10px;
     background: #fff;
@@ -5103,6 +5121,10 @@ span.shipping-destination{
     padding: 20px;
     border-radius: 10px;
     float: right;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
 }
 
 .product .product-gallery{
@@ -5462,7 +5484,10 @@ main.single-product .product .gallery-items li img:hover{
     margin: 0 auto;
     float: none !important;
 }
-
+.hrBottom {
+    border-bottom: 4px solid #05396A;
+}
+ 
 .product .product-info .product-headline{
     position: relative;
     padding: 7px 0;
@@ -5471,7 +5496,7 @@ main.single-product .product .gallery-items li img:hover{
 
 .product .product-info .product-headline h1.product-title{
     margin: .8rem 0;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     font-weight: 700;
     color: #666666;
@@ -5514,7 +5539,7 @@ main.single-product .product .gallery-items li img:hover{
 .product .product-info .product-attributes .product-config span.product-title-en{
     position: relative;
     bottom: 0;
-    right: 10px;
+    right: 0;
     padding-left: 8px;
     margin-left: auto;
     margin-bottom: -20px;
@@ -7713,3 +7738,57 @@ body.light .progress-wrap svg.progress-circle path {
 	stroke: var(--black-blue);
 }
 
+
+
+
+.acc h3 {
+    font-size: 16px;
+    /* background-color: rgba(0,0,0,0.6); */
+    color: #616161;
+    padding: 15px;
+    margin: 0;
+    cursor: pointer;
+     position: relative;
+}
+
+.acc h3:after {
+    content: '+';
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.acc.active h3:after {
+	content: '-';
+}
+
+.content-acc {
+    background-color: #fff;
+    display: none;
+}
+
+.content-inner {
+    padding: 15px;
+}
+
+.content-acc * {
+    margin-top: 0;
+    line-height: 2.5;
+    color: #616161;
+    font-size: 14px;
+}
+
+.acc {
+    border-bottom: 1px solid #fff;
+}
+.about-text {
+    color: #616161;
+    line-height: 2.5;
+    text-align: justify;
+    font-size: 14px;
+}
+.about-text p {
+    padding-block: 20px;
+}
